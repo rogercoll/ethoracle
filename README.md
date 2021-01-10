@@ -1,7 +1,13 @@
 # Final BCK work
 
 In order to understand more how Oracle functions work I tried to implement a basic one that return the value of one ETH in USD.
-Currently, it only returns an integer number. TODO: Return float with decimals.
+Currently, it only returns an integer number. 
+
+##TODO
+
+- Return float with decimals 
+
+- USDT instead of USD.
 
 ## Contracts
 
@@ -9,7 +15,7 @@ Currently, it only returns an integer number. TODO: Return float with decimals.
 
 - OracleETHUSDT.sol => Contract implementation of the Aggregator interface
 
-- ValueInUSDT.sol => This can be any contract that for some reason wants to know the value of ETH/USD. It will use as Oracle function the contract address you pass in the deployment). With this basic examples you can provide an amount of ethers and it will return the value in usd.
+- ValueInUSDT.sol => This can be any contract that for some reason wants to know the value of ETH/USD. It will use as Oracle function the contract address you set in the deployment. In this case it will use the already deployed OracleETHUSDT.sol. With this basic examples you can provide an amount of ethers to the `inUSDT(int 256 eths)` function and it will return the value in usd.
 
 ### Deployments in Rinkeby network
 
