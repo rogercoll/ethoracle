@@ -18,7 +18,13 @@ In order to understand more how Oracle functions work I tried to implement a bas
 
 ## Oracle update
 
-The main idea is to keep updating the price value of the Oracle contract. In order to do that I set a raspberry that runs the script `updatePrice.js` every one hour. This script gets the acutal value of ETH/USD using the CoinGecko API.
+The main idea is to keep updating the price value of the Oracle contract. In order to do that I set a raspberry that runs the script `updatePrice.js` every 30 minutes. This script gets the acutal value of ETH/USD using the CoinGecko API.
+
+Crontab of raspberry pi:
+
+```
+30 * * * * /usr/bin/node /home/pi/blockchain/ethoracle/scripts/updateOracle.js > /dev/null
+```
 
 ## Scripts
 
