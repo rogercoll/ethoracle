@@ -1,6 +1,7 @@
 # Final BCK work
 
 In order to understand more how Oracle functions work I tried to implement a basic one that return the value of one ETH in USD.
+Currently, it only returns an integer number. TODO: Return float with decimals.
 
 ## Contracts
 
@@ -28,5 +29,5 @@ Crontab of raspberry pi:
 
 ## Scripts
 
-- upateOracle.js => update the value ETH/USD of the Oracle contract. (private key to update the contract removed)
+- upateOracle.js => update the value ETH/USD of the Oracle contract with the actual value got from CoinGecko api. It exits after 3 block confirmations. (private key to update the contract removed)
 - howmanyusd.js => get the value of usd of x ethers. (node howmanyusd.js 3) //will return how much is worth 3 ethers in usd

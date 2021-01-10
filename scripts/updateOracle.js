@@ -99,6 +99,10 @@ async function updatePrice(pubkey, privatekey, contractAddr) {
 	await contract.methods.updatePrice(intprice).send({from: pubkey, gasPrice: gasPrice, gas: gasEstimate})
 	 .on('confirmation', function(confirmationNumber, receipt){
 		console.log(confirmationNumber); 
+		if (confirmationNumber >= 3) {
+			return process.kill(process.pid);
+		}
+
 	 })
 }
 
