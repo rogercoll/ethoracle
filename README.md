@@ -30,7 +30,7 @@ The main idea is to keep updating the price value of the Oracle contract. In ord
 Crontab of raspberry pi:
 
 ```
-30 * * * * /usr/bin/node /home/pi/blockchain/ethoracle/scripts/updateOracle.js > /dev/null
+*/30 * * * * /usr/bin/node /home/pi/blockchain/ethoracle/scripts/updateOracle.js > /dev/null
 ```
 
 ## Scripts
